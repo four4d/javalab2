@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.kim.life.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="지금 무엇을 하고 있나요?"
+        android:id="@+id/tx_what"
+        android:textSize="60dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="지도확인"
+        android:id="@+id/bt_map"
+        android:layout_below="@+id/tx_what"
+        android:layout_toRightOf="@+id/bt_config"
+        android:layout_toEndOf="@+id/bt_config" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/et_do"
+        android:nestedScrollingEnabled="false"
+        android:minLines="2"
+        android:layout_below="@+id/sp_category"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="을 하고있습니다."
+        android:id="@+id/tx_do"
+        android:layout_below="@+id/et_do"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사진촬영"
+        android:id="@+id/bt_camera"
+        android:layout_below="@+id/et_do"
+        android:layout_toRightOf="@+id/tx_do"
+        android:layout_toEndOf="@+id/tx_do" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사진첨부"
+        android:id="@+id/bt_photo"
+        android:layout_alignBottom="@+id/bt_camera"
+        android:layout_toRightOf="@+id/bt_camera"
+        android:layout_toEndOf="@+id/bt_camera" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="지금 이 순간 저장"
+        android:id="@+id/bt_save"
+        android:layout_below="@+id/bt_camera"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="타임라인"
+        android:id="@+id/bt_timeline"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="통계"
+        android:id="@+id/bt_analysis"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/bt_timeline"
+        android:layout_toEndOf="@+id/bt_timeline" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="설정"
+        android:id="@+id/bt_config"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/bt_analysis"
+        android:layout_toEndOf="@+id/bt_analysis" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sp_category"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/bt_map"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="어디어디에서"
+        android:id="@+id/tx_location"
+        android:layout_alignTop="@+id/bt_map"
+        android:layout_toRightOf="@+id/bt_timeline"
+        android:layout_marginLeft="20dp"
+        android:maxLines="3"
+        android:minLines="3"
+        android:layout_alignRight="@+id/bt_config"
+        android:layout_alignEnd="@+id/bt_config"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="00시 00분"
+        android:id="@+id/tx_time"
+        android:layout_alignTop="@+id/tx_location"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
